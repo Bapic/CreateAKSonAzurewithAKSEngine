@@ -55,10 +55,10 @@ To run aks-engine, download and install aks-engine. Follow instruction from here
 
 11. Verify that the cluster was created using Azure portal
 12. To use kubectl to manage the cluster, set KUBECONFIG to the config file
-(AKS-Engine creates this file). For example: 'C:\Windows\System32\_output\'resource group name'\kubeconfig\kubeconfig.eastus.json' 
+(AKS-Engine creates this file). For example: 'C:\Windows\System32\_output\resource group name\kubeconfig\kubeconfig.eastus.json' 
 
         $env:KUBECONFIG = <absolute file location>
-	e.g., $env:KUBECONFIG="C:\Users\bchakra\_output\k8sresgroup\kubeconfig\kubeconfig.eastus.json"
+	e.g., $env:KUBECONFIG="C:\Users\user name\_output\k8sresgroup\kubeconfig\kubeconfig.eastus.json"
     
             kubectl cluster-info
             kubectl get pods
