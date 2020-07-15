@@ -35,15 +35,14 @@ To run aks-engine, download and install aks-engine. Follow instruction from here
 
 8. Create a service principal in your subscription capture the properties of the output of spn-id and spn-password
 
-	az ad sp create-for-rbac --skip-assignment
-	
-	NOTE: use - az ad sp delete --id 'app id'  to delete the spn later
-	
-	$spnAppId="your spn id"
-
-	$spnAppPassword="your spn password"
-
-	az role assignment create --role Contributor --assignee $spnAppId --scope /subscriptions/$subscriptionId
+        az ad sp create-for-rbac --skip-assignment
+	    
+        NOTE: use - az ad sp delete --id 'app id'  to delete the spn later
+        
+        $spnAppId="your spn id"
+        $spnAppPassword="your spn password"
+        
+        az role assignment create --role Contributor --assignee $spnAppId --scope /subscriptions/$subscriptionId
 
 9. Set the apiModel for your K8S deployment, derived from step no. 3. above
 
@@ -55,10 +54,10 @@ To run aks-engine, download and install aks-engine. Follow instruction from here
 
 11. Verify that the cluster was created using Azure portal
 12. To use kubectl to manage the cluster, set KUBECONFIG to the config file
-(AKS-Engine creates this file). For example: 'C:\Windows\System32\_output\resource group name\kubeconfig\kubeconfig.eastus.json' 
+(AKS-Engine creates this file). *For example: 'C:\Windows\System32\_output\resource group name\kubeconfig\kubeconfig.eastus.json'*
 
         $env:KUBECONFIG = <absolute file location>
-	e.g., $env:KUBECONFIG="C:\Users\user name\_output\k8sresgroup\kubeconfig\kubeconfig.eastus.json"
+	*e.g., $env:KUBECONFIG="C:\Users\user name\_output\k8sresgroup\kubeconfig\kubeconfig.eastus.json"*
     
             kubectl cluster-info
             kubectl get pods
